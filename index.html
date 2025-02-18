@@ -785,6 +785,8 @@
 
         </section>
 
+        
+
 
         <footer class="site-footer" id="footer">
             <div class="site-footer-top">
@@ -898,6 +900,38 @@ T e m p l a t e M o
     <script src="js/jquery.sticky.js"></script>
     <script src="js/click-scroll.js"></script>
     <script src="js/custom.js"></script>
+    <canvas class="noise-overlay" id="noiseCanvas"></canvas>
+<script>
+    const canvas = document.getElementById("noiseCanvas");
+    const ctx = canvas.getContext("2d");
+
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+
+    function generateNoise() {
+        const imageData = ctx.createImageData(canvas.width, canvas.height);
+        const buffer = new Uint32Array(imageData.data.buffer);
+
+        for (let i = 0; i < buffer.length; i++) {
+            const intensity = Math.random() * 80 + 100; 
+            buffer[i] = (255 << 24) | (intensity << 16) | (intensity << 8) | intensity;
+        }
+
+        ctx.putImageData(imageData, 0, 0);
+    }
+
+    function animateNoise() {
+        generateNoise();
+        setTimeout(() => requestAnimationFrame(animateNoise), 100);
+    }
+
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+    animateNoise();
+</script>
+
 
 </body>
 
