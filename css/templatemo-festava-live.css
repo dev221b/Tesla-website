@@ -50,7 +50,7 @@ https://templatemo.com/tm-583-festava-live
   --section-bg-color:             #f0f8ff;
   --custom-btn-bg-color:          #8DE602;
   --custom-btn-bg-hover-color:    #c01f27;
-  --dark-color:                   #262626;
+  --dark-color:                   #141414;
   --p-color:                      #717275;
   --border-color:                 #7fffd4;
   /* --link-hover-color:             #8fe60293; */
@@ -1183,7 +1183,7 @@ strong {
 }
 
 .site-footer-bottom {
-  border-top: 1px solid #262626;
+  border-top: 1px solid var(--dark-color);
   margin-top: 60px;
 }
 
