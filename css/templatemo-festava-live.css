@@ -802,7 +802,7 @@ strong {
 -----------------------------------------*/
 .schedule-section {
   /* background-image: url('../images/nainoa-shizuru-unsplash-blur.jpg'); */
-  background: linear-gradient(to bottom,#262626, #8fe60216, #8fe60237,#8fe60216,#262626);
+  background: linear-gradient(to bottom,#141414, #8fe60216, #8fe60237,#8fe60216,#141414);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1351,6 +1351,7 @@ strong {
     padding: 10px 20px;
   }
   .hero-bg-logo {
+    /* top: 40%; */
     width: 70%; /* Slightly larger on smaller screens */
     max-width: 900px;
 }
@@ -1378,6 +1379,7 @@ strong {
   }
 }
 .hero-bg-logo {
+  /* top: 40%; */
   width: 55%; /* Even larger on very small screens */
   max-width: 500px;
   /* max-width: none; */
